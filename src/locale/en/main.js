@@ -5,4 +5,5 @@ export default {
   turkish: "Turkish",
   contactMail: "contact{'@'}app.com",
   copyright: "2022 © App",
+	languageOptions: 'Language Options',
 };

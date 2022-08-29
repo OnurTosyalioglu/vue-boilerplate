@@ -11,9 +11,15 @@ import {
 	FaLinkedin,
 	FaTwitterSquare,
 	FaInstagram,
+	FaGoogle,
+	MdEmailOutlined,
+	MdPassword,
 } from "oh-vue-icons/icons";
 
 export default () => addIcons(
+	MdPassword,
+	MdEmailOutlined,
+	FaGoogle,
 	FaAlignLeft, 
 	MdLanguageSharp, 
 	PrSpinner,

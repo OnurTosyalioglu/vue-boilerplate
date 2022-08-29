@@ -1,43 +1,23 @@
 export default {
   singInWithEmailAndPassword: ({ email, password }) => {
-    return new Promise((resolve, reject) => {
-      try {
-      } catch (e) {
-        reject(e);
-      }
-    });
+		return
   },
   createUserWithEmailAndPassword: ({ email, password }) => {
-    return new Promise((resolve, reject) => {
-      try {
-      } catch (e) {
-        reject(e);
-      }
-    });
+		return
   },
   singInWithFacebook: () => {
-    return new Promise((resolve, reject) => {});
+		return
   },
   singInWithGoogle: () => {
     return new Promise((resolve, reject) => {});
   },
   sendPasswordResetEmail: ({ email }) => {
-    return new Promise((resolve, reject) => {
-      try {
-      } catch (e) {
-        reject(e);
-      }
-    });
+		return 
   },
   confirmPassword: ({ oobCode, password }) => {
-    return new Promise((resolve, reject) => {
-      try {
-      } catch (e) {
-        reject(e);
-      }
-    });
+		return
   },
   signout: () => {
-    return new Promise((resolve, reject) => {});
+		return
   },
 };

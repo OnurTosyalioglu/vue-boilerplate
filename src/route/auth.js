@@ -1,7 +1,7 @@
 import auth from './auth.routes'
 
 const Login = () => import('../modules/auth/presentation/layout/login/Login.vue')
-const Signup = () => import('../modules/auth/presentation/layout/login/Login.vue')
+const Signup = () => import('../modules/auth/presentation/layout/signup/Signup.vue')
 const Recover = () => import('../modules/auth/presentation/layout/recover/Recover.vue')
 const Confirmation = () => import('../modules/auth/presentation/layout/confirmation/Confirmation.vue')
 

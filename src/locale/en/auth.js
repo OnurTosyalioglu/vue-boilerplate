@@ -9,4 +9,7 @@ export default {
 	rememberMe: 'Remember me?',
 	alreadyHaveAnAccount: 'Already have an account? Login',
 	dontHaveAnAccount: 'Don\'t have an account? Signup',
+	continueWithFacebook: 'Continue with Facebook',
+	continueWithGoogle: 'Continue with Google',
+	or: 'or',
 }
