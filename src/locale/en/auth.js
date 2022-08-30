@@ -3,6 +3,7 @@ export default {
 	signup: 'Signup',
 	recover: 'Recover',
 	confirmation: 'Confirmation',
+	confirm: 'Confirm',
 	email: 'E-mail',
 	password: 'Password',
 	forgotPassword: 'Forgot password?',

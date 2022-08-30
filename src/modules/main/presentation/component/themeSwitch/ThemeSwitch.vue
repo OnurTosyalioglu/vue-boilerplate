@@ -5,7 +5,11 @@
       class="select select-bordered select-sm"
       data-choose-theme
     >
-      <option v-for="(theme, index) in themes" :key="index" class="mr-5">
+      <option
+        v-for="(theme, index) in themes"
+        :key="index"
+        class="mr-5"
+      >
         {{ theme }}
       </option>
     </select>
@@ -15,13 +19,10 @@
 <script>
 import { themeChange } from "theme-change";
 export default {
-  data() {
-    return {
-      themes: ["light", "luxury", "dark"],
-      key: "",
-    };
-  },
-
+  data: () => ({
+    themes: ["light", "luxury", "dark"],
+    key: "",
+  }),
   async mounted() {
     themeChange(false);
     await this.getTheme();

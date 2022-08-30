@@ -36,11 +36,9 @@
       Notifications,
       Auth,
     },
-    data() {
-      return {
-        auth: true,
-      }
-    },
+    data: () => ({
+      auth: true, 
+    }),
   }
 </script>
 

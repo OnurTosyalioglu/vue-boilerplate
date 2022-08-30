@@ -53,11 +53,13 @@ export default {
     SignupButton,
     Options,
   },
-    data () {
+  data () {
+    return {
       email: '',
       password: '',
       error: '',
-    },
+    }
+  }
 }
 </script>
 

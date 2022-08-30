@@ -3,31 +3,30 @@
     <vue-load-image>
       <template v-slot:image>
         <img 
-          :style='size'
-          :src='src' 
-          :alt='alt'
-          />
+          :style="size" 
+          :src="src" 
+          :alt="alt" />
       </template>
-      <template v-slot:preloader> 
-        <v-icon 
-          name='pr-spinner'
-          animation='spin-pulse'
-          speed='fast' 
-          :scale='scale'>
+      <template v-slot:preloader>
+        <v-icon
+          name="pr-spinner"
+          animation="spin-pulse"
+          speed="fast"
+          :scale="scale"
+        >
         </v-icon>
       </template>
-      <template v-slot:error>
-      </template>
+      <template v-slot:error> </template>
     </vue-load-image>
   </div>
 </template>
 
 <script>
-import VueLoadImage from 'vue-load-image'
+import VueLoadImage from "vue-load-image";
 
 export default {
   components: {
-    'vue-load-image': VueLoadImage
+    "vue-load-image": VueLoadImage,
   },
   props: {
     width: String,
@@ -38,14 +37,15 @@ export default {
   },
   data() {
     return {
+      width: this.width,
+      height: this.height,
       size: {
         width: this.width,
-        height: this.height,
+        height: this.width,
       }
     }
   }
-}
+};
 </script>
 
-<style>
-</style>
+<style></style>

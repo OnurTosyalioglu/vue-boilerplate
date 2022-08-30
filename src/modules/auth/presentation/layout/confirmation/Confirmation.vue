@@ -5,30 +5,36 @@
     </template>
   </metainfo>
 
-    <div class='lg:container mx-auto px-4'>
-    </div>
+  <div class="grid grid-cols-12 max-w-sm mx-auto px-4">
+    <Header :title="$t('auth.confirmation')" />
+    <Password />
+    <Password />
+    <ConfirmationButton />
+  </div>
 </template>
 
 <script>
-import { useMeta } from 'vue-meta'
+import { useMeta } from "vue-meta";
+import Header from "../../../../main/presentation/component/header/Header.vue";
+import ConfirmationButton from "../../component/confirmationButton/ConfirmationButton.vue";
+import Password from "../../component/password/Password.vue";
 
 export default {
-  setup () {
+  setup() {
     useMeta({
-      title: 'auth.confirmation',
+      title: "auth.confirmation",
       htmlAttrs: {
         amp: true,
-      }
-    })
+      },
+    });
   },
-
-  data () {
-    return {
-
-    }
+  data: () => ({}),
+  components: {
+    Header,
+    ConfirmationButton,
+    Password,
   },
-}
+};
 </script>
 
-<style>
-</style>
+<style></style>

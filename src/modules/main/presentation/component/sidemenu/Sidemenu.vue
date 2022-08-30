@@ -75,12 +75,10 @@ import social from "../../../../../route/social.routes.js";
 import AsyncImage from "../asyncImage/AsyncImage.vue";
 
 export default {
-  data() {
-    return {
-      index,
-      social,
-    };
-  },
+  data: () => ({
+    index,
+    social, 
+  }),
   components: {
     AsyncImage,
   },

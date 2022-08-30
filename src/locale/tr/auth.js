@@ -3,6 +3,7 @@ export default {
 	signup: 'Kayıt',
 	recover: 'Hesabı Kurtar',
 	confirmation: 'Parola Yenile',
+	confirm: 'Onayla',
 	email: 'E-posta',
 	password: 'Parola',
 	forgotPassword: 'Parolayı sıfırla?',

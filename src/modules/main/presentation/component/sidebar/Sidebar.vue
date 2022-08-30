@@ -27,11 +27,9 @@ export default {
   components: {
     Sidemenu,
   },
-  data() {
-    return {
-      side: false,
-    };
-  },
+  data: () => ({
+    side: false, 
+  }),
   methods: {
     toggle() {
       this.side = !this.side;

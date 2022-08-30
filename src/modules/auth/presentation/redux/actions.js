@@ -1,23 +1,57 @@
+// import AuthService from '../../application/service/auth.service'
+
 export default {
-  singInWithEmailAndPassword: ({ email, password }) => {
-		return
+  singInWithEmailAndPassword: (
+    { commit, state },
+    { email, password }
+  ) => {
+		return new Promise((resolve, reject) => 
+		{
+			console.log('test')
+			commit('loading')		
+		});
   },
-  createUserWithEmailAndPassword: ({ email, password }) => {
-		return
+  createUserWithEmailAndPassword: (
+    { commit, state },
+    { email, password }
+  ) => {
+    return new Promise((resolve, reject) =>
+		{
+		
+		});
   },
-  singInWithFacebook: () => {
-		return
+	singInWithFacebook: ({ commit, state }) => 
+	{
+		return new Promise((resolve, reject) =>
+		{
+		
+		});
   },
-  singInWithGoogle: () => {
-    return new Promise((resolve, reject) => {});
+  singInWithGoogle: ({ commit, state }) => {
+		return new Promise((resolve, reject) => 
+		{
+
+		});
   },
   sendPasswordResetEmail: ({ email }) => {
-		return 
+		return new Promise((resolve, reject) => 
+		{
+
+		});
   },
-  confirmPassword: ({ oobCode, password }) => {
-		return
+  confirmPassword: (
+    { commit, state },
+    { oobCode, password }
+  ) => {
+		return new Promise((resolve, reject) => 
+		{
+		
+		});
   },
-  signout: () => {
-		return
+  signout: ({ commit, state }) => {
+		return new Promise((resolve, reject) => 
+		{
+
+		});
   },
 };

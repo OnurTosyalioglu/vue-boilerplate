@@ -5,15 +5,30 @@
     </template>
   </metainfo>
 
-  <div class="grid grid-cols-4 max-w-sm mx-auto px-4">
+  <div 
+    v-if="loading" 
+    class="grid grid-cols-12 max-w-sm mx-auto px-4 h-screen pb-36 justify-items-center content-center">
+    <div class="col-span-12">
+    <v-icon name="pr-spinner" animation="spin" scale="2.5"/>
+    </div>
+  </div>
+
+  <div v-if="!loading" class="grid grid-cols-12 max-w-sm mx-auto px-4">
     <ContinueWithFacebook />
     <ContinueWithGoogle />
     <Divider />
-    <Email />
-    <Password />
+    <Email v-model:email="email" v-model:error="error" />
+    <Password
+      v-model:password="password"
+      v-model:error="error"
+    />
     <RememberMe />
     <ForgotPassword />
-    <LoginButton />
+    <LoginButton
+      v-model:email="email"
+      v-model:password="password"
+      v-model:error="error"
+    />
     <Options
       :text="$t('auth.dontHaveAnAccount')"
       link="/signup"
@@ -32,6 +47,8 @@ import LoginButton from "../../component/loginButton/LoginButton.vue";
 import Options from "../../component/options/Options.vue";
 import ForgotPassword from "../../component/forgotPassword/ForgotPassword.vue";
 import RememberMe from "../../component/rememberMe/RememberMe.vue";
+import { mapState, mapActions, mapMutations } from 'vuex'
+
 
 export default {
   setup() {
@@ -53,11 +70,21 @@ export default {
     LoginButton,
     Options,
   },
-    data () {
-      email: '',
-      password: '',
-      error: '',
-    },
+  data () {
+    return {
+      email: "",
+      password: "",
+      error: "",
+    }
+  },
+  computed: mapState({
+    loading: state => state.auth.loading,
+    user: state => state.auth.user,
+    error: state => state.auth.error,
+  }),
+  methods: {
+
+  },
 };
 </script>
 

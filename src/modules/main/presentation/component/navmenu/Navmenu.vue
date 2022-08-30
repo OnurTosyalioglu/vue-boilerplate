@@ -11,11 +11,9 @@
 <script>
   import index from '../../../../../route/index.js'
   export default {
-    data() {
-      return {
-        index,
-      }
-    }
+    data: () => ({
+      index, 
+    }),
   }
 </script>
  

@@ -1,5 +1,5 @@
 import config from "../../../../config/firebase";
-import { getApps, initializeApp } from "firebase";
+import { getApps, initializeApp } from 'firebase/app'
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -10,7 +10,7 @@ import {
   signOut,
   confirmPasswordReset,
   sendPasswordResetEmail,
-} from "firebase/auth";
+} from 'firebase/auth'
 
 const app = initializeApp(config);
 const auth = getAuth(app);
@@ -114,4 +114,4 @@ class Service {
 
 const AuthService = new Service();
 
-export { AuthService, auth };
+export default { AuthService, auth }

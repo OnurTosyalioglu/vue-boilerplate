@@ -17,11 +17,9 @@ export default {
   components: {
     AsyncImage,
   },
-  data() {
-    return {
-
-    }
-  },
+  data: () => ({
+  
+  }),
 };
 </script>
 

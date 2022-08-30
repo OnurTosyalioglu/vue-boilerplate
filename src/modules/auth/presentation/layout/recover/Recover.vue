@@ -5,12 +5,26 @@
     </template>
   </metainfo>
 
-    <div class='lg:container mx-auto px-4'>
-    </div>
+  <div class="grid grid-cols-12 max-w-sm mx-auto px-4">
+    <Header 
+      :title="$t('auth.recover')"
+    />
+  <Email 
+    v-model:email="email"
+    v-model:error="error"
+  />
+  <RecoverButton 
+    v-model:email="email"
+    v-model:error="error"
+  /> 
+  </div>
 </template>
 
 <script>
 import { useMeta } from 'vue-meta'
+import Header from '../../../../main/presentation/component/header/Header.vue'
+import Email from '../../../../auth/presentation/component/email/Email.vue'
+import RecoverButton from '../../component/recoverButton/RecoverButton.vue'
 
 export default {
   setup () {
@@ -21,11 +35,15 @@ export default {
       }
     })
   },
-  data () {
-    return {
-
-    }
+  components: {
+    Header,
+    Email,
+    RecoverButton,
   },
+  data: () => ({
+    email: '',
+    error: '',
+  }),
 }
 </script>
 

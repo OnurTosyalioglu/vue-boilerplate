@@ -6,4 +6,6 @@ export default {
   contactMail: "contact{'@'}app.com",
   copyright: "2022 © App",
 	languageOptions: 'Language Options',
+	settings: 'Settings',
+	logout: 'Logout',
 };
